@@ -53,6 +53,7 @@
             this.btnF1 = new System.Windows.Forms.Button();
             this.btnRst = new System.Windows.Forms.Button();
             this.btnAsignar = new System.Windows.Forms.Button();
+            this.btnRevolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -339,11 +340,23 @@
             this.btnAsignar.UseVisualStyleBackColor = true;
             this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
+            // btnRevolver
+            // 
+            this.btnRevolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnRevolver.Location = new System.Drawing.Point(114, 553);
+            this.btnRevolver.Name = "btnRevolver";
+            this.btnRevolver.Size = new System.Drawing.Size(203, 39);
+            this.btnRevolver.TabIndex = 26;
+            this.btnRevolver.Text = "Revolver";
+            this.btnRevolver.UseVisualStyleBackColor = true;
+            this.btnRevolver.Click += new System.EventHandler(this.btnRevolver_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 581);
+            this.ClientSize = new System.Drawing.Size(800, 661);
+            this.Controls.Add(this.btnRevolver);
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.btnRst);
             this.Controls.Add(this.btnF1);
@@ -403,6 +416,7 @@
         private System.Windows.Forms.Button btnF1;
         private System.Windows.Forms.Button btnRst;
         private System.Windows.Forms.Button btnAsignar;
+        private System.Windows.Forms.Button btnRevolver;
     }
 }
 

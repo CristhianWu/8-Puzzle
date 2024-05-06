@@ -226,6 +226,46 @@ namespace _8_Puzzle
             string promptValue9 = Prompt.ShowDialog("Boton 9", "");
             btn9.Text = promptValue9;
         }
+        private void btnRevolver_Click(object sender, EventArgs e)
+        {
+            // arreglo que contendra los numeros
+            string[] numeros = new string[9];
+
+            // Generar 8 numeros aleatorios del 1 al 8
+            Random random = new Random();
+            for (int i = 0; i < 8; i++)
+            {
+                int randomNumber;
+                do
+                {
+                    randomNumber = random.Next(1, 9);
+                } while (Array.IndexOf(numeros, randomNumber.ToString()) != -1); // Verifica si el numero ya esta en el arreglo
+
+                numeros[i] = randomNumber.ToString();
+            }
+
+            // Genera una ubicacion para el espacio en blanco
+            int indiceEsp = random.Next(0, 9);
+
+            // Acomoda el arreglo para el espacio en blanco
+            for (int i = numeros.Length - 1; i > indiceEsp; i--)
+            {
+                numeros[i] = numeros[i - 1];
+            }
+
+            numeros[indiceEsp] = " ";
+
+            //asignar los valores del arreglo a los botones
+            btn1.Text = numeros[0];
+            btn2.Text = numeros[1];
+            btn3.Text = numeros[2];
+            btn4.Text = numeros[3];
+            btn5.Text = numeros[4];
+            btn6.Text = numeros[5];
+            btn7.Text = numeros[6];
+            btn8.Text = numeros[7];
+            btn9.Text = numeros[8];
+        }
 
         private void btnrst_Click(object sender, EventArgs e)
         {
@@ -239,5 +279,6 @@ namespace _8_Puzzle
             }
             InitializeComponent();
         }
+
     }
 }
